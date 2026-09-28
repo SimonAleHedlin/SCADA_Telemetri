@@ -6,7 +6,7 @@ def main():
 
     kor_system = True
 
-    #Här startar vi igång en while-loop med menyval
+    #Start av while-loop med menyval
     while kor_system:
         print("\n--- SCADA TELEMETRI CENTRAL---")
         print("1. Registrera nya sensor")
@@ -31,7 +31,7 @@ def main():
             aktiva_sensorer.append(ny_sensor)
             print(f"Systemmeddelande: Sensor:{s_id} är driftsatt.")
 
-        #Lägg till ett nytt mätvärde på en sensor
+        #Lägger till ett nytt mätvärde på en sensor
         elif val == "2":
             print("\n INMATNING AV NYTT MÄTVÄRDE")
             sok_sensorID = input("Ange vilken senosor som du vill lägga in nytt värde för: ")
@@ -71,7 +71,7 @@ def main():
             vald_sensor = input("Mata in sensorID som du vill ha ut mätvärden på: ")
             sensor_funnen = False
 
-            # Den fundamentala loopen ni utelämnade
+            
             for sensor in aktiva_sensorer:
                 if sensor.sensor_id == vald_sensor:
                     sensor_funnen = True
@@ -127,7 +127,7 @@ def main():
             for sensor in aktiva_sensorer:
                 if sensor.sensor_id == sok_id:
                     sensor_funnen = True
-                    # Den inbyggda funktionen för att radera ett element ur en lista
+                    # Funktion för att radera ett element ur en lista
                     aktiva_sensorer.remove(sensor)
                     print(f"Systemmeddelande: Sensor {sok_id} har demonterats och raderats från registret.")
                     break

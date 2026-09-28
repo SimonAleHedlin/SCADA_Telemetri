@@ -13,7 +13,7 @@ class Sensor:
         self.historik.append(post)
 
     def medelvarde_matvarden(self):
-        # 1. Skydd mot ZeroDivisionError 
+        # Skydd mot ZeroDivisionError 
         if len(self.historik) == 0:
             return 0, "Ingen data", "Ingen data"
 
